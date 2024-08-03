@@ -24,10 +24,10 @@
 #define CA_EXTRA_9	8
 #define CA_EXTRA_10	9
 
-// ColAndreas currently supports 50000 user collision objects (This can be raised as needed)
+// ColAndreas currently supports 100000 user collision objects (This can be raised as needed)
 #if defined MAX_CA_OBJECTS
-	#if MAX_CA_OBJECTS > 50000
-		#error [ColAndreas] MAX_CA_OBJECTS is too high, maximum value is 50000
+	#if MAX_CA_OBJECTS > 100000
+		#error [ColAndreas] MAX_CA_OBJECTS is too high, maximum value is 100000
 	#endif
 #else
 	#define MAX_CA_OBJECTS	10000
