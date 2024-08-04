@@ -295,10 +295,10 @@ namespace rw {
 		}
         else
         {
-            logprintf("could not found collision in file %B %B %s",
+            logprintf("could not found collision in file %d %d %c%c%c%c",
                       rw.gcount() == sizeof(fileHeader),
                       !strncmp(fileHeader.validator, "COL3", 4),
-                      fileHeader.validator);
+                      fileHeader.validator[0], fileHeader.validator[1], fileHeader.validator[2], fileHeader.validator[3]);
         }
 		return false;
 	}
