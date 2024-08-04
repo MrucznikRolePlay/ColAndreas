@@ -82,7 +82,7 @@ bool LoadCollisionData(btDynamicsWorld* collisionWorld)
 		{
 			if (i % 100 == 0)
 			{
-                logprintf("\33Loading: %0.1f\r", ((double)i / ModelCount) * 100);
+                printf("\33Loading: %0.1f\r", ((double)i / ModelCount) * 100);
 			}
 			ColAndreasColObject* colObject = new ColAndreasColObject(i);
 			ColAndreasColObject* convex = new ColAndreasColObject(i, true); //true for convex mesh
@@ -388,7 +388,7 @@ void InitCollisionMap(btDynamicsWorld* collisionWorld, RemovedBuildingManager* r
 
 		if (i % 100 == 0)
 		{
-            logprintf("\33Loading: %0.1f\r", ((double)i / IPLCount) * 100);
+            printf("\33Loading: %0.1f\r", ((double)i / IPLCount) * 100);
 		}
 
 		if (!removedManager->isRemoved(ModelPlacements[i].Modelid, ModelPlacements[i].Position))

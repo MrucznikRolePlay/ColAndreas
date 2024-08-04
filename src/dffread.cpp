@@ -1,4 +1,5 @@
 #include <cmath>
+#include <cstring>
 #include "ColAndreas.h"
 #include "DynamicWorld.h"
 #include <renderware.h>
@@ -79,7 +80,6 @@ namespace rw {
 		if (rw.gcount() == sizeof(fileHeader) && !strncmp(fileHeader.validator, "COL3", 4))
 		{
 			rw.seekg(40, std::ios::cur);
-            logprintf("dff models count: %d", ModelCount);
 			if (ModelCount > 0)
 			{
 				uint16_t i = ModelCount;
@@ -294,6 +294,10 @@ namespace rw {
 				}
 			}
 		}
+        else
+        {
+            logprintf("could not found collision in file");
+        }
 		return false;
 	}
 }
