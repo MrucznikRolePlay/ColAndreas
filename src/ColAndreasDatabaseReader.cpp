@@ -48,6 +48,7 @@ bool ReadColandreasDatabaseFile(std::string FileLocation)
 				GetBytes(buffer, ModelCount, FileIndex, 2);
 				GetBytes(buffer, IPLCount, FileIndex, 4);
 
+                logprintf("loading map, dff models count: %d", ModelCount);
 				if (ModelCount > 0) {
 
 					for (uint16_t i = 0; i < ModelCount; i++) {
