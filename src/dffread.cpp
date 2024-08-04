@@ -1,5 +1,4 @@
 #include <cmath>
-#include <cstring>
 #include "ColAndreas.h"
 #include "DynamicWorld.h"
 #include <renderware.h>
@@ -296,7 +295,10 @@ namespace rw {
 		}
         else
         {
-            logprintf("could not found collision in file");
+            logprintf("could not found collision in file %B %B %s",
+                      rw.gcount() == sizeof(fileHeader),
+                      !strncmp(fileHeader.validator, "COL3", 4),
+                      fileHeader.validator);
         }
 		return false;
 	}
