@@ -132,7 +132,7 @@ namespace rw {
 
 	struct ColHeader
 	{
-		char validator[3];
+		char validator[4];
 		char version;
 		unsigned int size;
 		char modelName[22];
